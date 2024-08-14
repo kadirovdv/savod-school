@@ -1,0 +1,114 @@
+<!-- As a link -->
+<div class="position-sticky top-0 w-100">
+  <nav class="navbar bg-white p-3">
+    <div class="d-none me-3">
+      <div class="container-fluid">
+        <div class="d-flex justify-content-between align-items-center">
+          <a
+            [routerLink]="['/main']"
+            class="navbar-brand mb-0 h1 fs-2 text-dark"
+          >
+            <img src="/assets/img/logo.png" width="180" alt="Logo" />
+          </a>
+          <div>
+            <span
+              class="active"
+              (click)="open = !open"
+              [class.cross]="open === true"
+            ></span>
+            <span
+              class="active"
+              (click)="open = !open"
+              [class.cross]="open === true"
+            ></span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid last">
+      <div class="d-flex justify-content-between align-items-center w-100">
+        <a
+          [routerLink]="['/main']"
+          routerLinkActive="text-dark"
+          class="navbar-brand mb-0 h1 fs-2 me-5 hide"
+        >
+          <img src="/assets/img/logo.png" width="180" alt="Logo" />
+        </a>
+        <div
+          class="d-flex align-items-center justify-content-between me-4 nav-2 nav-collapse"
+          [class.inactive-ul]="open == false"
+          [class.active-ul]="open == true"
+        >
+          <ul class="mb-0 d-flex align-items-center">
+            <li (click)="open = !open">
+              <a
+                [routerLink]="['/school']"
+                routerLinkActive="text-dark"
+                (click)="scrollToSection('structure')"
+              >
+                {{ "structure" | translate }}
+              </a>
+            </li>
+            <li (click)="open = !open">
+              <a
+                [routerLink]="['/school']"
+                routerLinkActive="text-dark"
+                (click)="scrollToSection('price')"
+              >
+                {{ "prices" | translate }}
+              </a>
+            </li>
+            <!-- <li (click)="open = !open">
+              <a
+                routerLink="/school"
+                routerLinkActive="text-dark"
+                (click)="scrollToSection('discounts')"
+              >
+                {{ "discounts" | translate }}
+              </a>
+            </li> -->
+          </ul>
+          <div class="d-flex align-items-center">
+            <a href="https://t.me/anormaktabi" class="hide">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="25"
+                height="25"
+                fill="#36b872"
+                class="bi bi-telegram"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.287 5.906q-1.168.486-4.666 2.01-.567.225-.595.442c-.03.243.275.339.69.47l.175.055c.408.133.958.288 1.243.294q.39.01.868-.32 3.269-2.206 3.374-2.23c.05-.012.12-.026.166.016s.042.12.037.141c-.03.129-1.227 1.241-1.846 1.817-.193.18-.33.307-.358.336a8 8 0 0 1-.188.186c-.38.366-.664.64.015 1.088.327.216.589.393.85.571.284.194.568.387.936.629q.14.092.27.187c.331.236.63.448.997.414.214-.02.435-.22.547-.82.265-1.417.786-4.486.906-5.751a1.4 1.4 0 0 0-.013-.315.34.34 0 0 0-.114-.217.53.53 0 0 0-.31-.093c-.3.005-.763.166-2.984 1.09"
+                />
+              </svg>
+            </a>
+            <button
+              class="btn btn-green-outline me-3"
+              routerLink="/send-own-data"
+            >
+              {{ "send-form" | translate }}
+            </button>
+            <button class="btn btn-light-outline me-4">
+              {{ "for-parents" | translate }}
+            </button>
+            <p
+              class="mb-0 cursor-pointer"
+              *ngIf="lang === 'uz'"
+              (click)="[changeLang('ru'), (open = !open)]"
+            >
+              RU
+            </p>
+            <p
+              class="mb-0 p-0 cursor-pointer"
+              *ngIf="lang === 'ru'"
+              (click)="[changeLang('uz'), (open = !open)]"
+            >
+              UZ
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+</div>

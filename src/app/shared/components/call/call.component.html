@@ -1,0 +1,115 @@
+<div class="call-component">
+  <div class="call-component-body" [class.mx-4]="disabled === true">
+    <div class="container">
+      <div class="row">
+        <div
+          class="col-md-6 d-flex align-items-center flex-column justify-content-center"
+        >
+          <h1 class="text-white">
+            {{ "call-header" | translate }}
+          </h1>
+          <h5 class="text-white">
+            {{ "call-body" | translate }}
+          </h5>
+        </div>
+        <div class="col-md-1"></div>
+        <div
+          class="col-md-5 d-flex align-items-center flex-column justify-content-center"
+        >
+          <input
+            type="text"
+            class="custom-input mb-3"
+            placeholder="{{ 'name' | translate }}"
+            [(ngModel)]="clientName"
+          />
+          <select class="custom-select mb-3" [(ngModel)]="region">
+            <option value="" selected>{{ "which-region" | translate }}</option>
+            <option [value]="'mirzo-ulug' | translate">
+              {{ "mirzo-ulug" | translate }}
+            </option>
+            <option [value]="'yunusobod' | translate">
+              {{ "yunusobod" | translate }}
+            </option>
+            <option [value]="'qibray' | translate">
+              {{ "qibray" | translate }}
+            </option>
+            <option [value]="'yashnabod' | translate">
+              {{ "yashnabod" | translate }}
+            </option>
+            <option [value]="'mirabad' | translate">
+              {{ "mirabad" | translate }}
+            </option>
+            <option [value]="'yakkasaray' | translate">
+              {{ "yakkasaray" | translate }}
+            </option>
+            <option [value]="'chilonzor' | translate">
+              {{ "chilonzor" | translate }}
+            </option>
+            <option [value]="'uchtepa' | translate">
+              {{ "uchtepa" | translate }}
+            </option>
+            <option [value]="'olmazor' | translate">
+              {{ "olmazor" | translate }}
+            </option>
+            <option [value]="'shayxantohur' | translate">
+              {{ "shayxantohur" | translate }}
+            </option>
+            <option [value]="'sergeli' | translate">
+              {{ "sergeli" | translate }}
+            </option>
+            <option [value]="'toshkent-vil' | translate">
+              {{ "toshkent-vil" | translate }}
+            </option>
+          </select>
+          <select class="custom-select mb-3" [(ngModel)]="grade">
+            <option value="" selected>
+              {{ "which-class" | translate }}
+            </option>
+            <option [value]="'beginner' | translate">
+              {{ "beginner" | translate }}
+            </option>
+            <option [value]="'upper' | translate">
+              {{ "upper" | translate }}
+            </option>
+          </select>
+          <input
+            type="text"
+            class="custom-input mb-3"
+            mask="+000 00 000 00 00"
+            placeholder="+998"
+            [(ngModel)]="phoneNumber"
+          />
+          <button
+            class="btn btn-yellow-lg w-100"
+            (click)="[(show = true), sendClientDateToTelegram()]"
+          >
+            {{ "send-form" | translate }}
+          </button>
+          <button
+            *ngIf="disabled"
+            class="btn btn-light-lg ms-2 w-100 mt-3"
+            routerLink="/"
+          >
+            {{ "back" | translate }}
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<ngb-toast *ngIf="show" [autohide]="false" (hidden)="show = false">
+  <ng-template ngbToastHeader>
+    <div class="me-auto">
+      <strong class="mx-1">
+        <img src="/assets/img/logo.png" alt="Logo" width="70" />
+      </strong>
+    </div>
+  </ng-template>
+  <span *ngIf="error">
+    {{ "error" | translate }}
+  </span>
+  <span *ngIf="!error">
+    {{ "ensure" | translate }}
+  </span>
+</ngb-toast>

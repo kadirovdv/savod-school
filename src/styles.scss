@@ -1,1 +1,301 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import "~@angular/cdk/overlay-prebuilt.css";
+
+// html {
+//   scroll-behavior: auto !important;
+// }
+
+.bg-custom {
+  background-color: #36b872;
+}
+
+li {
+  list-style: none !important;
+}
+
+ul {
+  padding-left: 0px !important;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.fs-1,
+.fs-2,
+.fs-3,
+.fs-4,
+.fs-5,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5 {
+  text-wrap: wrap !important;
+}
+
+.toast {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  z-index: 999 !important;
+}
+
+.btn-yellow-lg {
+  color: #ffffff !important;
+  font-size: 26px !important;
+  line-height: 1.2 !important;
+  font-weight: 700 !important;
+  border-width: 0px !important;
+  border-radius: 50px !important;
+  background-color: #ffb715 !important;
+  background-position: center center !important;
+  border-color: transparent !important;
+  border-style: solid !important;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out,
+    border-color 0.2s ease-in-out !important;
+  padding: 20px 0px !important;
+  min-width: 300px;
+}
+
+.btn-yellow-lg:hover {
+  background-color: #eca705 !important;
+}
+
+.btn-light-lg {
+  color: #ffffff !important;
+  font-size: 26px !important;
+  line-height: 1.2 !important;
+  font-weight: 700 !important;
+  border-width: 2px !important;
+  border-radius: 50px !important;
+  background-position: center center !important;
+  border-color: #ffffff !important;
+  border-style: solid !important;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out,
+    border-color 0.2s ease-in-out !important;
+  padding: 20px 0px !important;
+  min-width: 300px;
+}
+
+.btn-light-lg:hover {
+  background-color: #fff !important;
+  color: #36b872 !important;
+}
+
+.btn-green-outline {
+  font-size: 16px !important;
+  line-height: 1.2 !important;
+  font-weight: 600 !important;
+  border-width: 2px !important;
+  border-radius: 50px !important;
+  color: #36b872 !important;
+  background-color: #fff !important;
+  background-position: center center !important;
+  border-color: #36b872 !important;
+  border-style: solid !important;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out,
+    border-color 0.2s ease-in-out !important;
+  padding: 8px 0px !important;
+  min-width: 180px;
+}
+
+.btn-green-outline:hover {
+  background-color: #36b872 !important;
+  color: #fff !important;
+}
+
+.btn-light-outline {
+  color: #36b872 !important;
+  font-size: 16px !important;
+  line-height: 1.2 !important;
+  font-weight: 600 !important;
+  border-radius: 50px !important;
+  background-position: center center !important;
+  border-color: #ffffff !important;
+  border-style: solid !important;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out,
+    border-color 0.2s ease-in-out !important;
+  padding: 8px 0px !important;
+  min-width: 180px;
+}
+
+.btn-light-outline:hover {
+  background-color: #36b872 !important;
+  color: #fff !important;
+}
+
+.bg-green {
+  background-color: #36b872 !important;
+}
+
+.btn-light {
+  color: #ffb715 !important;
+  font-size: 16px !important;
+  line-height: 1.2 !important;
+  font-weight: 600 !important;
+  border-radius: 50px !important;
+  background-position: center center !important;
+  background-color: #fff !important;
+  border: none !important;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out,
+    border-color 0.2s ease-in-out !important;
+  padding: 20px 0px !important;
+  min-width: 300px;
+  font-size: 26px !important;
+}
+
+.btn-violet {
+  color: #7b47a3 !important;
+  font-size: 16px !important;
+  line-height: 1.2 !important;
+  font-weight: 600 !important;
+  border-radius: 50px !important;
+  background-position: center center !important;
+  background-color: #fff !important;
+  border: none !important;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out,
+    border-color 0.2s ease-in-out !important;
+  padding: 20px 0px !important;
+  min-width: 300px;
+  font-size: 26px !important;
+}
+
+.nav-2 {
+  width: 60%;
+  max-width: 60%;
+}
+
+.f-1 {
+  font-size: 45px !important;
+  font-weight: bold;
+}
+
+.bg-primary-bright {
+  background-color: #e5f3ff !important;
+}
+
+.text-primary-bright {
+  color: #105998 !important;
+}
+
+.bg-yellow-bright {
+  background-color: #fff6e5 !important;
+}
+
+.text-yellow-bright {
+  color: #feb714 !important;
+}
+
+.bg-green-bright {
+  background-color: #e5fff1 !important;
+}
+
+.text-green-bright {
+  color: #35b772 !important;
+}
+
+.bg-violet-bright {
+  background-color: #f3e4ff !important;
+}
+
+.text-violet-bright {
+  color: #7b47a3 !important;
+}
+
+.text-green {
+  color: #36b872 !important;
+}
+
+.bg-yellow {
+  background-color: #ffb715 !important;
+}
+
+.bg-violet {
+  background-color: #7b47a3 !important;
+}
+
+.custom-input {
+  color: rgb(17, 17, 17);
+  background-color: rgb(255, 255, 255);
+  border-radius: 50px;
+  font-size: 15px;
+  font-weight: 400;
+  height: 60px;
+  margin: 0;
+  font-size: 100%;
+  padding: 10px 20px;
+  line-height: 1.33;
+  width: 100%;
+  border: 0 none;
+  outline: none;
+}
+
+.custom-select {
+  color: rgb(17, 17, 17);
+  background-color: rgb(255, 255, 255) !important;
+  border-radius: 50px;
+  font-size: 15px;
+  font-weight: 400;
+  width: 100%;
+  cursor: pointer;
+  height: 60px;
+  padding: 0 45px 0 20px;
+  font-size: 16px;
+  line-height: 1.33;
+  outline: none;
+  background: transparent;
+  color: initial;
+  -webkit-appearance: none;
+  appearance: none;
+  border: none;
+}
+
+.accordion-item {
+  border-radius: 20px !important;
+  overflow: hidden;
+  background-color: #e5f3ff !important;
+  margin-bottom: 15px !important;
+}
+
+.accordion .accordion-button {
+  background-color: #e5f3ff !important;
+  font-size: 18px !important;
+  font-weight: 600;
+  &::after {
+    background-image: url(/assets/svg/plus.svg) !important;
+    transform: rotate(45deg) !important;
+    zoom: 2;
+  }
+}
+
+.accordion .accordion-button:not(.collapsed) {
+  box-shadow: none !important;
+}
+.accordion .accordion-button:is(.collapsed) {
+  &::after {
+    transform: rotate(0deg) !important;
+  }
+}
+
+.accordion .accordion-button:focus {
+  box-shadow: none !important;
+}
+
+.text-primary-cs {
+  color: #105998 !important;
+}
+
+@media screen and (max-width: 650px) {
+  .toast {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+  }
+
+  .btn-yellow-lg {
+    width: 90% !important;
+  }
+}

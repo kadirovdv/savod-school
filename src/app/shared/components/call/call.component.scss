@@ -1,0 +1,66 @@
+.call-component {
+  margin: 0px 20px;
+  background-color: #35B772 !important;
+  border-radius: 25px;
+  position: relative;
+  &-body, .col-md-6 {
+    min-height: 40vh;
+    padding: 40px 0px;
+  }
+  &::before {
+    content: url(/assets/svg/call-1.svg);
+    display: block;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    zoom: 1.4;
+  }
+  &::after {
+    content: url(/assets/svg/call-2.svg);
+    display: block;
+    position: absolute;
+    bottom: -2%;
+    left: 0%;
+    zoom: 1.4;
+  }
+
+  h1 {
+    font-size: 60px;
+    font-weight: bold;
+  }
+  h5 {
+    font-size: 24px;
+    letter-spacing: 2px;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .call-component {
+    overflow: hidden;
+    h1 {
+      font-size: 35px !important;
+      letter-spacing: normal !important;
+      text-align: center;
+    }
+    h5 {
+      letter-spacing: normal !important;
+      font-size: 18px !important;
+      text-align: center;
+    }
+    &-body, .col-md-6 {
+      min-height: auto !important;
+      padding: 20px 10px;
+    }
+    &::before {
+      zoom: 1;
+    }
+    &::after {
+      top: -1% !important;
+      bottom: auto !important;
+      right: 0% !important;
+      left: auto !important;
+      zoom: 1;
+      rotate: -180deg;
+    }
+  }
+}

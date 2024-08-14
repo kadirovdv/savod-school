@@ -1,0 +1,11 @@
+section {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    background-color: #fff;
+    z-index: 999 !important;
+}
+
+::-webkit-scrollbar {
+    display: none !important;
+}

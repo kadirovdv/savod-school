@@ -1,0 +1,269 @@
+<app-school-navbar></app-school-navbar>
+<main>
+  <section class="school-header">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-7 d-flex align-items-center">
+          <h1 class="text-green">{{ "school-header" | translate }}</h1>
+        </div>
+        <div class="col-md-5">
+          <img
+            src="https://res.cloudinary.com/dpdxy6xhs/image/upload/v1722787395/jyvfg4elwueehmtzcmc9.jpg"
+            class="w-100"
+            alt=""
+            style="border-radius: 25px"
+          />
+        </div>
+      </div>
+      <div class="school-header-footer bg-green">
+        <h2>{{ "school-header-footer-h1" | translate }}</h2>
+        <p>{{ "school-header-footer-p" | translate }}</p>
+      </div>
+    </div>
+  </section>
+  <section class="school-specifics">
+    <div class="container-fluid">
+      <div class="row mb-3">
+        <div class="col-md-8">
+          <div class="d-flex align-items-start">
+            <h1 class="school-time">{{ "time" | translate }}</h1>
+          </div>
+          <div class="row mt-5">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
+              <div
+                class="bg-violet-bright text-center pt-2 pb-2"
+                style="border-radius: 25px"
+              >
+                <h4 class="text-violet fw-bolder">
+                  {{ "grades" | translate }}
+                </h4>
+              </div>
+            </div>
+            <div class="col-md-2"></div>
+          </div>
+          <div class="row mt-3">
+            <div class="col-md-1"></div>
+            <div class="col-md-10">
+              <div
+                class="bg-violet-bright text-center pt-2 pb-2"
+                style="border-radius: 20px"
+              >
+                <h2 class="text-violet fw-normal">
+                  {{ "time-by" | translate }}
+                </h2>
+              </div>
+            </div>
+            <div class="col-md-1"></div>
+          </div>
+          <div class="row mt-3">
+            <div class="col-md-3"></div>
+            <div class="col-md-6">
+              <div
+                class="bg-violet-bright text-center pt-2 pb-2"
+                style="border-radius: 20px"
+              >
+                <p class="fs-4 fw-normal">{{ "day-by" | translate }}</p>
+              </div>
+            </div>
+            <div class="col-md-3"></div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <img
+            src="https://res.cloudinary.com/dpdxy6xhs/image/upload/v1722787390/doljieyvrzptm5gejaci.jpg"
+            class="class-img"
+            alt=""
+          />
+        </div>
+      </div>
+      <div class="row col-rever">
+        <div class="col-md-4">
+          <img
+            src="https://res.cloudinary.com/dpdxy6xhs/image/upload/v1722787392/lic2f9ovnp11hs1mgsvt.jpg"
+            class="class-img"
+            alt=""
+          />
+        </div>
+        <div class="col-md-8">
+          <div
+            class="d-flex align-items-center justify-content-center text-center kitchen-wrapper"
+          >
+            <h1 class="kithcen-header">{{ "kithcen-header" | translate }}</h1>
+          </div>
+          <div class="row mt-3">
+            <div class="col-md-1"></div>
+            <div class="col-md-10">
+              <div
+                class="bg-primary-bright text-center pt-2 pb-2"
+                style="border-radius: 20px"
+              >
+                <h2 class="text-primary-cs fw-normal">
+                  {{ "grades" | translate }}
+                </h2>
+              </div>
+            </div>
+            <div class="col-md-1"></div>
+          </div>
+          <div class="row mt-3">
+            <div class="col-md-6">
+              <div
+                class="bg-primary-bright text-center pt-2 pb-2 d-flex justify-content-center align-items-center"
+                style="border-radius: 20px; height: 180px; max-height: 180px"
+              >
+                <h5 class="fw-normal">{{ "food-halal" | translate }}</h5>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div
+                class="bg-primary-bright text-center p-4"
+                style="border-radius: 20px; height: 180px; max-height: 180px"
+              >
+                <h5 class="fw-normal">{{ "must-eat" | translate }}</h5>
+                <br />
+                <h5 class="fw-normal">{{ "can-bring" | translate }}</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="structure bg-green" id="structure">
+    <h1 class="structure-header">{{"structure-header" | translate}}</h1>
+    <div class="container-fluid">
+      <div class="row">
+        <div
+          class="col-md-6 d-flex flex-column align-items-center justify-content-center"
+        >
+          <div class="d-flex school-structure-cards">
+            <div>{{ "class-count" | translate }}</div>
+            <div>{{ "foot-zone" | translate }}</div>
+          </div>
+          <div class="d-flex school-structure-cards">
+            <div>{{ "safety" | translate }}</div>
+            <div>{{ "coworking" | translate }}</div>
+          </div>
+          <div class="d-flex school-structure-cards">
+            <div>{{ "modern-classes" | translate }}</div>
+            <div>{{ "lib" | translate }}</div>
+            <div>{{ "sport-zone" | translate }}</div>
+          </div>
+          <div class="d-flex school-structure-cards">
+            <div>{{ "comp-lab" | translate }}</div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <img
+            src="https://res.cloudinary.com/dpdxy6xhs/image/upload/v1722787396/plwgeo2iirmz67pzpwcn.jpg"
+            style="border-radius: 25px"
+            class="w-100"
+            alt=""
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="discounts">
+    <div class="my-5">
+      <app-price></app-price>
+    </div>
+    <section class="discounts">
+      <div class="container-fluid">
+        <h1 class="text-center">{{ "discounts" | translate }}</h1>
+        <div class="row">
+          <div class="col-md-8">
+            <div
+              class="card border border-0 bg-primary-bright"
+              style="min-height: 310px; border-radius: 25px"
+            >
+              <div
+                class="card-body"
+                style="margin: 40px 20px; padding-top: 40px"
+              >
+                <h4 class="fw-normal">{{ "discount-1" | translate }}</h4>
+                <h4 class="fw-normal">{{ "discount-2" | translate }}</h4>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <img
+              src="https://res.cloudinary.com/dpdxy6xhs/image/upload/v1722787395/jyvfg4elwueehmtzcmc9.jpg"
+              class="w-100"
+              alt=""
+              style="border-radius: 25px"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+  </section>
+  <div class="my-5">
+    <app-call></app-call>
+  </div>
+  <section class="add-advantages">
+    <div class="container-fluid">
+      <h1 class="structure-header text-dark">
+        {{"add-advantages" | translate}}
+      </h1>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="add-adv-card bg-violet-bright">
+            <div class="d-flex">
+              <img src="/assets/img/trizubes-vl.png" style="zoom: 0.8" alt="" />
+              {{ "add-advantages-1" | translate }}
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="add-adv-card bg-yellow-bright">
+            <div class="d-flex">
+              <img src="/assets/img/folder.png" style="zoom: 0.8" alt="" />
+              {{ "add-advantages-2" | translate }}
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="add-adv-card bg-green-bright">
+            <div class="d-flex">
+              <img src="/assets/img/chip.png" style="zoom: 0.8" alt="" />
+              {{ "add-advantages-3" | translate }}
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="add-adv-card bg-primary-bright">
+            <div class="d-flex">
+              <img src="/assets/img/change.png" style="zoom: 0.8" alt="" />
+              {{ "add-advantages-4" | translate }}
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="add-adv-card bg-yellow-bright">
+            <div class="d-flex">
+              <img src="/assets/img/question.png" style="zoom: 0.8" alt="" />
+              {{ "add-advantages-5" | translate }}
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="add-adv-card bg-yellow-bright">
+            <div class="d-flex">
+              <img src="/assets/img/book.png" style="zoom: 0.8" alt="" />
+              {{ "add-advantages-6" | translate }}
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="add-adv-card bg-green-bright">
+            <div class="d-flex">
+              <img src="/assets/img/hat.png" style="zoom: 0.8" alt="" />
+              {{ "add-advantages-7" | translate }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>

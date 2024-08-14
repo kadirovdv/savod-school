@@ -1,0 +1,60 @@
+<app-navbar></app-navbar>
+<main>
+  <div class="landing">
+    <div class="container-fluid">
+      <section class="section-f">
+        <div class="container">
+          <img src="/assets/img/header_1.svg" class="header_1" width="250" />
+          <img src="/assets/img/header_2.svg" class="header_2" width="250" />
+          <img src="/assets/img/header_3.svg" class="header_3" width="250" />
+          <img src="/assets/img/header_4.svg" class="header_4" width="250" />
+          <div
+            class="d-flex justify-content-center align-items-center flex-column"
+          >
+            <h2>{{"general-title" | translate}}</h2>
+            <h5>{{ "title-content" | translate }}</h5>
+            <div class="d-flex mt-4">
+              <button class="btn btn-yellow-lg me-2" routerLink="/send-own-data">
+                {{ "send-form" | translate }}
+              </button>
+              <button class="btn btn-light-lg ms-2" routerLink="/school">
+                {{ "addition" | translate }}
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <!-- About school -->
+
+    <!-- About school 2 -->
+
+
+  <!-- Call -->
+  <app-price section="prices"></app-price>
+  <section class="mt-5" style="margin-bottom: 20px !important;">
+    <app-call></app-call>
+  </section>
+
+  <!-- Activities -->
+
+
+  <!-- Reception -->
+
+  <!-- Discounts -->
+
+  <!-- Frequently -->
+</main>
+
+<ngb-toast *ngIf="show" [autohide]="false" (hidden)="show=false">
+  <ng-template ngbToastHeader>
+    <div class="me-auto">
+      <strong class="mx-1">
+        <img src="/assets/img/logo.png" alt="Logo" width="70" />
+      </strong>
+    </div>
+  </ng-template>
+  {{ "ensure" | translate }}
+</ngb-toast>
