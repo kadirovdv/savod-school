@@ -1,0 +1,69 @@
+<section>
+  <div class="container">
+    <div class="d-flex flex-column justify-content-center align-items-center">
+      <img src="/assets/img/russian_header.png" class="w-50" alt="" />
+      <h1 class="russian-title">{{ "russian" | translate }}</h1>
+    </div>
+    <ng-container *ngIf="lang === 'uz'">
+      <p class="course-desc">
+        O'quv markazimizda rus tili bo'yicha o'quv kurslari rus tilini noldan
+        o'rganmoqchi bo'lgan yoki bilimlarini rivojlantirishni istaganlar uchun
+        mo'ljallangan.
+        <br />
+        <br />
+        Kursda rus tilining asosiy grammatikasi, talaffuzi, va kundalik suhbatda
+        qo'llaniladigan iboralar o'rgatiladi. O'qituvchilarimiz rus tilini
+        mukammal biladigan, tajribali mutaxassislar bo'lib, interaktiv va
+        qiziqarli darslar olib boradilar.
+
+        <br />
+        <br />
+
+        Biz talabalarga moslashuvchan dars jadvallarini taklif etamiz va ularni
+        muntazam ravishda bilimlarini sinovdan o‘tkazib turamiz. Kurs oxirida
+        talabalar rus tilida ravon gaplashish va yozish malakasiga ega
+        bo‘ladilar.
+      </p>
+    </ng-container>
+    <ng-container *ngIf="lang === 'ru'">
+      <p class="course-desc">
+        Курсы обучения русскому языку в нашем учебном центре предназначены для
+        тех, кто хочет выучить русский язык с нуля или желает улучшить свои
+        знания.
+        <br />
+        <br />
+        На курсе изучаются основы русской грамматики, произношения и выражений,
+        используемых в повседневной беседе. Наши преподаватели – опытные
+        профессионалы, прекрасно владеющие русским языком и проводящие
+        интерактивные и интересные уроки.
+
+        <br />
+        <br />
+
+        Мы предлагаем студентам гибкий график занятий и регулярно проверяем их
+        знания. По окончании курса студенты смогут свободно говорить и писать
+        по-русски.
+      </p>
+    </ng-container>
+    <ng-container *ngIf="lang === 'en'">
+      <p class="course-desc">
+        Russian language courses at our training center are designed for those
+        who want to learn Russian from scratch or want to improve their
+        knowledge.
+        <br />
+        <br />
+        The course covers the basics of Russian grammar, pronunciation, and
+        expressions used in everyday conversation. Our teachers are experienced
+        professionals who have an excellent command of the Russian language and
+        conduct interactive and interesting lessons.
+
+        <br />
+        <br />
+
+        We offer students a flexible schedule of classes and regularly test
+        their knowledge. Upon completion of the course, students will be able to
+        speak and write Russian fluently.
+      </p>
+    </ng-container>
+  </div>
+</section>

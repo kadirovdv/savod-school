@@ -1,0 +1,186 @@
+<app-navbar [whiteNavbar]="true"></app-navbar>
+<section>
+  <!-- [ngClass]="
+index === 0
+  ? 'section-success'
+  : index === 1
+  ? 'bg-secondary'
+  : index === 2
+  ? 'bg-success'
+  : index === 3
+  ? 'bg-danger'
+  : index === 4
+  ? 'bg-warning'
+  : 'bg-info'
+" -->
+  <div class="container" style="max-width: 1230px">
+    <div class="row">
+      <div class="col-md-6">
+        <h1 class="fw-bold">
+          {{ "register-for" | translate }}
+        </h1>
+        <div class="swiper mySwiper-2">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide flex-column">
+              <img src="/assets/img/arabic_white.png" alt="header-image" />
+              <div>
+                <h3 class="text-center fw-bold">{{ "arabic" | translate }}</h3>
+                <p id="course_desc">
+                  {{ "arabic-desc" | translate }}
+                </p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <img src="/assets/img/english_white.png" alt="header-image" />
+              <div>
+                <h3 class="text-center fw-bold">{{ "english" | translate }}</h3>
+                <p id="course_desc">
+                  {{ "english-desc" | translate }}
+                </p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <img src="/assets/img/russian_white.png" alt="header-image" />
+              <div>
+                <h3 class="text-center fw-bold">{{ "russian" | translate }}</h3>
+                <p id="course_desc">
+                  {{ "russian-desc" | translate }}
+                </p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <img src="/assets/img/medicine_white.png" alt="header-image" />
+              <div>
+                <h3 class="text-center fw-bold">{{ "medicine" | translate }}</h3>
+                <p id="course_desc">
+                  {{ "medicine-desc" | translate }}
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="container">
+          <div class="row">
+            <div class="card">
+              <div class="card-body send-info-card">
+                <form (submit)="postMessage()">
+                  <div class="mb-3">
+                    <label for="exampleNam" class="form-label form-label-name"
+                      >{{ "name" | translate }}</label
+                    >
+                    <input
+                      type="text"
+                      id="exampleNam"
+                      class="form-control"
+                      aria-describedby="name"
+                      placeholder="{{ 'your-name' | translate }}"
+                      [(ngModel)]="name"
+                      name="name"
+                      required
+                    />
+                  </div>
+                  <div class="mb-3 disabled-input position-relative">
+                    <label for="name" class="form-label form-label-phone"
+                      >{{ "phone" | translate }}</label
+                    >
+                    <div class="d-flex">
+                      <span
+                        class="input-group-text"
+                        id="basic-addon1"
+                        (click)="openCountryDropdown()"
+                      >
+                        {{ selectedCountry }}
+                      </span>
+                      <ng-select
+                        #ngSelect
+                        [items]="countries"
+                        bindValue="code"
+                        [placeholder]="'+998'"
+                        [(ngModel)]="selectedCountry"
+                        name="+998"
+                      >
+                        <div>
+                          <input type="text" class="form-control" name="" id="">
+                        <ng-template ng-option-tmp let-item="item">
+                          <span class="text-dark"
+                            >{{ item.flag }} {{ item.code }}
+                            {{ item.name.ru }}</span
+                          >
+                        </ng-template>
+                      </div>
+                      </ng-select>
+                      <input
+                        type="text"
+                        class="form-control contact-number numb"
+                        id="exampleNumber"
+                        aria-describedby="name"
+                        [(ngModel)]="number"
+                        (keydown)="validateInput($event)"
+                        name="number"
+                        required
+                      />
+                    </div>
+                    <small class="text-danger" *ngIf="error">
+                      {{ "error-message" | translate }}
+                    </small>
+                  </div>
+                  <label for="form-select" class="form-label form-label-branch"
+                    >{{ "branch" | translate }}</label
+                  >
+                  <select
+                    class="form-select mb-3"
+                    aria-label="Default select example"
+                    id="geolocation_select"
+                    [(ngModel)]="branch"
+                    name="branch"
+                    required
+                  >
+                    <option value="Chorsu">{{ "chorsu" | translate }}</option>
+                    <option value="Kadisheva">{{ "kadisheva" | translate }}</option>
+                    <option value="Qatortol">{{ "qatortol" | translate }}</option>
+                    <option value="Sergeli">{{ "sergeli" | translate }}</option>
+                    <option value="Integro">{{ "integro" | translate }}</option>
+                  </select>
+                  <label
+                    for="type"
+                    class="mb-2"
+                    id="form-label-course"
+                    class="form-label-course form-label"
+                    >{{ "course" | translate }}</label
+                  >
+                  <select
+                    class="form-select mb-3"
+                    aria-label="Default select example"
+                    id="course_select"
+                    [(ngModel)]="course"
+                    name="course"
+                    required
+                  >
+                    <option value="Hamshiralik">{{ "medicine" | translate }}</option>
+                    <option value="Arab tili">{{ "arabic" | translate }}</option>
+                    <option value="Ingiliz tili">{{ "english" | translate }}</option>
+                    <option value="Rust tili">{{ "russian" | translate }}</option>
+                  </select>
+                  <button
+                    type="submit"
+                    class="btn btn-primary"
+                    id="submit-button"
+                  >
+                    {{ "send" | translate }}
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<ngb-toast *ngIf="show" header="Savod.uz" [autohide]="true" [delay]="10000" (hidden)="show=false">
+  {{ "message" | translate }}
+</ngb-toast>

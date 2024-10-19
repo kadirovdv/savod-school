@@ -1,0 +1,99 @@
+<section id="courses">
+  <h5 class="text-center pb-5" id="courses-heading">
+    {{ "choose-course" | translate }}
+  </h5>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3" id="hamshira">
+        <div class="card text-center">
+          <div class="card-body">
+            <img src="/assets/img/medicine_header.png" alt="" width="100%" />
+            <h3 class="text-center fw-bold">{{ "medicine" | translate }}</h3>
+            <p id="course_desc">{{ "medicine-desc" | translate }}</p>
+            <button
+              class="btn btn-outline-primary btn-lg open-medicine btn-signup mb-2"
+              routerLink="/courses/medicine"
+            >
+              {{ "about-course" | translate }}
+            </button>
+            <button
+              class="btn btn-outline-primary btn-lg open-medicine btn-signup"
+              routerLink="/form"
+            >
+              {{ "register" | translate }}
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 mt-5" id="arabic">
+        <div class="card text-center">
+          <div class="card-body">
+            <img src="/assets/img/arabic_header.png" alt="" width="100%" />
+            <h3 class="text-center fw-bold">{{ "arabic" | translate }}</h3>
+            <p id="course_desc">
+              {{ "arabic-desc" | translate }}
+            </p>
+            <button
+              class="btn btn-outline-primary btn-lg open-medicine btn-signup mb-2"
+              routerLink="/courses/arabic"
+            >
+              {{ "about-course" | translate }}
+            </button>
+            <button
+              class="btn btn-outline-primary btn-lg btn-signup open-arabic"
+              routerLink="/form"
+            >
+              {{ "register" | translate }}
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3" id="ingliz">
+        <div class="card text-center">
+          <div class="card-body">
+            <img src="/assets/img/english_header.png" alt="" width="100%" />
+            <h3 class="text-center fw-bold">{{ "english" | translate }}</h3>
+            <p id="course_desc">
+              {{ "english-desc" | translate }}
+            </p>
+            <button
+              class="btn btn-outline-primary btn-lg open-medicine btn-signup mb-2"
+              routerLink="/courses/english"
+            >
+              {{ "about-course" | translate }}
+            </button>
+            <button
+              class="btn btn-outline-primary btn-lg btn-signup open-english"
+              routerLink="/form"
+            >
+              {{ "register" | translate }}
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 mt-5 mb-3" id="russian">
+        <div class="card text-center">
+          <div class="card-body">
+            <img src="/assets/img/russian_header.png" alt="" width="100%" />
+            <h3 class="text-center fw-bold">{{ "russian" | translate }}</h3>
+            <p id="course_desc">
+              {{ "russian-desc" | translate }}
+            </p>
+            <button
+              class="btn btn-outline-primary btn-lg open-medicine btn-signup mb-2"
+              routerLink="/courses/russian"
+            >
+              {{ "about-course" | translate }}
+            </button>
+            <button
+              class="btn btn-outline-primary btn-lg btn-signup open-russian"
+              routerLink="/form"
+            >
+              {{ "register" | translate }}
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,105 @@
+<nav
+  class="navbar navbar-expand-lg fixed-top"
+  style="z-index: 1000 !important;"
+  [class.white-navbar]="whiteNavbar"
+>
+  <div class="container">
+    <li class="nav-item nav-item-hidden">
+      <a class="nav-link" routerLink="/">
+        <img
+          [src]="
+            whiteNavbar === true
+              ? '/assets/img/savod_white.png'
+              : '/assets/img/logo.png'
+          "
+          class="d-block"
+          style="width: 130px"
+          alt="logo"
+        />
+      </a>
+    </li>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav mobile-flex">
+        <div class="d-flex align-items-center mobile-collapse">
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/">
+              <img
+                [src]="
+                  whiteNavbar === true
+                    ? '/assets/img/savod_white.png'
+                    : '/assets/img/logo.png'
+                "
+                class="d-block"
+                style="width: 130px"
+                alt="logo"
+              />
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/main" id="navaboutus">
+              {{ "about-us" | translate }}
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/courses/main" id="navcourses">
+              {{ "courses" | translate }}
+            </a>
+          </li>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link"
+              routerLink="/branches"
+              role="button"
+              id="navbranches"
+            >
+            {{ "branches" | translate }}
+            </a>
+          </li>
+        </div>
+        <div class="contacts d-flex align-items-center">
+          <li class="nav-item pe-0">
+            <a
+              class="nav-link btn btn-outline-primary d-flex align-items-center"
+              href="tel:+998930000000"
+            >
+              <i class="bi bi-telephone-plus me-1"></i>
+              <span> +998 (78) 113-93-39 </span>
+            </a>
+          </li>
+          <li class="nav-item ps-4 pe-1 dropdown">
+            <span
+              class="nav-link text-white btn btn-outline-primary dropdown-toggle"
+              type="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              <span id="langToDisplay">{{ langDisplay === 'uz' ? '🇺🇿 O\'zbekcha' : langDisplay === 'ru' ? '🇷🇺 Русский' : '🇺🇸 English' }}</span>
+            </span>
+            <ul class="dropdown-menu">
+              <li (click)="changeLanguage('uz')" *ngIf="langDisplay !== 'uz'">
+                <span class="dropdown-item" id="langToSwitch">🇺🇿 O'zbekcha</span>
+              </li>
+              <li (click)="changeLanguage('ru')" *ngIf="langDisplay !== 'ru'">
+                <span class="dropdown-item" id="langToSwitch">🇷🇺 Русский</span>
+              </li>
+              <li (click)="changeLanguage('en')" *ngIf="langDisplay !== 'en'">
+                <span class="dropdown-item" id="langToSwitch">🇺🇸 English</span>
+              </li>
+            </ul>
+          </li>
+        </div>
+      </ul>
+    </div>
+  </div>
+</nav>

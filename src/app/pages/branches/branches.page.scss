@@ -1,0 +1,15 @@
+section {
+    min-height: 20vh !important;
+    padding: 70px 0px;
+
+    .swiper {
+        min-height: 40vh;
+        height: 50vh !important;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .swiper {
+        min-height: 70vh !important;
+    }
+}

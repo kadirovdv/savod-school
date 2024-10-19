@@ -1,0 +1,38 @@
+.white-navbar {
+  a,
+  span,
+  .dropdown-item,
+  .dropdown-menu,
+  .nav-item,
+  .nav-link {
+    color: #fff !important;
+  }
+
+  .nav-item .dropdown-menu .dropdown-item:hover {
+    background-color: #4600D1 !important;
+  }
+}
+
+
+@media screen and (max-width: 500px) {
+  .white-navbar {
+    a,
+    span,
+    .dropdown-item,
+    .dropdown-menu,
+    .nav-item,
+    .nav-link {
+      color: #000 !important;
+    }
+  
+    .nav-item .dropdown-menu .dropdown-item:hover {
+      background-color: #4600D1 !important;
+    }
+    button {
+      border-color: #fff !important;
+    }
+    .navbar-toggler-icon  {
+      background-image: url(/assets/img/white-menu-icon.svg) !important;
+    }
+  }
+}

@@ -1,0 +1,80 @@
+.loader-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #ffffff85;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  z-index: 1099 !important;
+  backdrop-filter: blur(20px);
+}
+
+.loader {
+  margin-top: 10px;
+  width: 100px;
+  aspect-ratio: 1;
+  display: grid;
+  border: 4px solid #0000;
+  border-radius: 50%;
+  border-right-color: #25b09b;
+  animation: l15 1s infinite linear;
+}
+.loader::before,
+.loader::after {
+  content: "";
+  grid-area: 1/1;
+  margin: 2px;
+  border: inherit;
+  border-radius: 50%;
+  animation: l15 2s infinite;
+}
+.loader::after {
+  margin: 8px;
+  animation-duration: 3s;
+}
+
+.animated-text {
+  display: inline-block;
+  font-size: 2.4rem;
+  font-weight: bold;
+  white-space: nowrap;
+  overflow: hidden;
+  color: #25b09b;
+}
+
+.animated-text::after {
+  content: "";
+  display: inline-block;
+  animation: abomination1 1.235s linear 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes abomination1 {
+  0% {
+    content: "S";
+  }
+  25% {
+    content: "Sa";
+  }
+  50% {
+    content: "Sav";
+  }
+  75% {
+    content: "Savo";
+  }
+  100% {
+    content: "Savod";
+  }
+}
+@keyframes l15 {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(1turn);
+  }
+}

@@ -1,0 +1,361 @@
+<app-navbar></app-navbar>
+<section id="f-section">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-7">
+        <div class="d-flex flex-column" style="height: 33vh">
+          <h1 id="typing-animation" class="mb-4">
+            {{ "general-title" | translate }}
+          </h1>
+          <div class="d-flex flex-wrap">
+            <button
+              class="btn btn-primary fs-5 header-btn d-flex align-items-center contact-btn"
+              routerLink="/form"
+            >
+              <span class="me-2" id="enroll"
+                >{{ "enroll-now" | translate }}</span
+              >
+              <i class="bi bi-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-5 mt-5">
+        <img
+          src="/assets/img/header_savod.png"
+          alt="header-image"
+          class="w-100 d-block"
+        />
+      </div>
+    </div>
+  </div>
+</section>
+<section id="about-us">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <h2 class="mb-5" id="aboutus-h2">{{ "about-us" | translate }}</h2>
+        <ng-container *ngIf="lang === 'uz'">
+          <p id="aboutus_f">
+            Savod Oʻquv Markazi oʻz faoliyatini 3 yildan beri mufassalan olib
+            bormoqda. Bu muddat ichida 5000 dan ortiq oʻquvchilar ta’lim
+            olmoqda. Bizning asosiy maqsadimiz oʻquvchilarga yuqori sifatli
+            taʼlim berish va ularni muvofiq mutaxassislikka tayyorlashdir.
+          </p>
+          <br />
+          <p id="aboutus_s">
+            Bizning katta tajribali oʻqituvchilar jamoamiz, innovatsion
+            darsliklar va barcha talablar uchun qoʻllanma yaratishimiz bilan,
+            biz oʻquvchilarning shaxsiy va akademik rivojlanishlariga katta
+            eʼtibor beramiz.
+          </p>
+          <p id="aboutus_t">
+            Oʻquv jarayonimiz ilgari oʻrganishni ragʻbatlantirish va yangi
+            texnologiyalardan foydalanish orqali oʻquvchilarni maʼnaviy va
+            intellektual jarayonlarini kuchaytirishni maqsad qilganmiz. Savod
+            Oʻquv Markazi sifat va ilmiyati yuqori taʼlimning yanada
+            rivojlanishiga harakat qilmoqda.
+          </p>
+        </ng-container>
+        <ng-container *ngIf="lang === 'ru'">
+          <p id="aboutus_f">
+            Центр обучения грамоте работает в полную силу уже 3 года. За этот
+            период обучение получают более 5000 студентов. Наша главная цель –
+            предоставить студентам качественное образование и подготовить их к
+            соответствующей профессии.
+          </p>
+          <br />
+          <p id="aboutus_s">
+            Благодаря нашей опытной команде преподавателей, инновационным
+            учебникам и руководствам, отвечающим всем требованиям, мы уделяем
+            большое внимание личностному и академическому развитию наших
+            студентов.
+          </p>
+          <p id="aboutus_t">
+            Наш образовательный процесс направлен на укрепление духовных и
+            интеллектуальных процессов учащихся путем поощрения углубленного
+            обучения и использования новых технологий. Образовательный центр
+            Савод старается и дальше развивать качественное и научное высшее
+            образование.
+          </p>
+        </ng-container>
+        <ng-container *ngIf="lang === 'en'">
+          <p id="aboutus_f">
+            The Literacy Training Center has been operating at full capacity for
+            3 years now. During this period, more than 5,000 students have been
+            trained. Our main goal is to provide students with quality education
+            and prepare them for the relevant profession.
+          </p>
+          <br />
+          <p id="aboutus_s">
+            With our experienced teaching team, innovative textbooks and
+            comprehensive guides, we place great emphasis on the personal and
+            academic development of our students.
+          </p>
+          <p id="aboutus_t">
+            Our educational process is aimed at strengthening the spiritual and
+            intellectual processes of students by encouraging in-depth learning
+            and using new technologies. Savod Educational Center strives to
+            further develop high-quality and scientific higher education.
+          </p>
+        </ng-container>
+      </div>
+      <div class="col-md-6 d-flex justify-content-center align-items-center">
+        <img src="/assets/img/abus.jpg" width="100%" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="courses">
+  <h5 class="text-center pb-5" id="courses-heading">
+    {{ "choose-course" | translate }}
+  </h5>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3" id="hamshira">
+        <div class="card text-center">
+          <div class="card-body">
+            <img src="/assets/img/medicine_header.png" alt="" width="100%" />
+            <h3 class="text-center fw-bold">{{ "medicine" | translate }}</h3>
+            <p id="course_desc">{{ "medicine-desc" | translate }}</p>
+            <button
+              class="btn btn-outline-primary btn-lg open-medicine btn-signup"
+            >
+              {{ "register" | translate }}
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 mt-5" id="arabic">
+        <div class="card text-center">
+          <div class="card-body">
+            <img src="/assets/img/arabic_header.png" alt="" width="100%" />
+            <h3 class="text-center fw-bold">{{ "arabic" | translate }}</h3>
+            <p id="course_desc">
+              {{ "arabic-desc" | translate }}
+            </p>
+            <button
+              class="btn btn-outline-primary btn-lg btn-signup open-arabic"
+            >
+              {{ "register" | translate }}
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3" id="ingliz">
+        <div class="card text-center">
+          <div class="card-body">
+            <img src="/assets/img/english_header.png" alt="" width="100%" />
+            <h3 class="text-center fw-bold">{{ "english" | translate }} </h3>
+            <p id="course_desc">
+              {{ "english-desc" | translate }}
+            </p>
+            <button
+              class="btn btn-outline-primary btn-lg btn-signup open-english"
+            >
+              {{ "register" | translate }}
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 mt-5 mb-3" id="russian">
+        <div class="card text-center">
+          <div class="card-body">
+            <img src="/assets/img/russian_header.png" alt="" width="100%" />
+            <h3 class="text-center fw-bold">{{ "russian" | translate }}</h3>
+            <p id="course_desc">
+              {{ "russian-desc" | translate }}
+            </p>
+            <button
+              class="btn btn-outline-primary btn-lg btn-signup open-russian"
+            >
+              {{ "register" | translate }}
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="branches">
+  <h2 class="text-center pt-3" id="our-branches">{{ "our-branches" | translate }}</h2>
+  <div class="swiper mySwiper mt-5">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <div class="branch-card">
+          <div
+            class="branch-card-half branch-card-adress-photo d-flex justify-content-center align-items-center"
+          >
+            <img src="/assets/img/chorsu.jpg" alt="chorsu" class="w-100" />
+          </div>
+          <div class="branch-card-half branch-card-adress-details">
+            <h1 class="branch-card-adress-location">{{ "chorsu" | translate }}</h1>
+            <div class="branch-card-adress-name">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="25"
+                height="25"
+                fill="#fff"
+                class="bi bi-geo-alt-fill"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6"
+                />
+              </svg>
+              <h4 class="text-white">{{ "address" | translate }}:</h4>
+            </div>
+            <p class="branch-card-adress-paragraph">Chorsu 3A, Texnomartni oldida</p>
+            <div class="branch-card-adress-links">
+              <a href="https://maps.app.goo.gl/Mu7xMsLoF94Yofz38" target="_blank" class="me-4 text-white">Google Maps</a>
+              <a href="https://yandex.uz/maps/-/CDXAANnQ" target="_blank" class="text-white">Yandex Maps</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="branch-card">
+          <div
+            class="branch-card-half branch-card-adress-photo d-flex justify-content-center align-items-center"
+          >
+            <img
+              src="/assets/img/kadisheva.jpg"
+              alt="chorsu"
+              class="w-100"
+              style="scale: 1.345"
+            />
+          </div>
+          <div class="branch-card-half branch-card-adress-details">
+            <h1 class="branch-card-adress-location">{{ "kadisheva" | translate }} </h1>
+            <div class="branch-card-adress-name">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="25"
+                height="25"
+                fill="#fff"
+                class="bi bi-geo-alt-fill"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6"
+                />
+              </svg>
+              <h4 class="text-white">{{ "address" | translate }}:</h4>
+            </div>
+            <p class="branch-card-adress-paragraph">Aviasozlar ko'chasi 59</p>
+            <div class="branch-card-adress-links">
+              <a href="https://maps.app.goo.gl/s7DkCTcTGPsm5mrD9" class="me-4 text-white">Google Maps</a>
+              <a href="https://yandex.uz/maps/-/CDXFJUiY" class="text-white">Yandex Maps</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="branch-card">
+          <div
+            class="branch-card-half branch-card-adress-photo d-flex justify-content-center align-items-center"
+          >
+            <img
+              src="/assets/img/kadisheva.jpg"
+              alt="kadisheva"
+              class="w-100"
+              style="scale: 1.345"
+            />
+          </div>
+          <div class="branch-card-half branch-card-adress-details">
+            <h1 class="branch-card-adress-location">{{ "qatortol" | translate }} </h1>
+            <div class="branch-card-adress-name">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="25"
+                height="25"
+                fill="#fff"
+                class="bi bi-geo-alt-fill"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6"
+                />
+              </svg>
+              <h4 class="text-white">{{ "address" | translate }}:</h4>
+            </div>
+            <p class="branch-card-adress-paragraph">Qatortol ko'chasi, 60/4, 2 etaj</p>
+            <div class="branch-card-adress-links">
+              <a href="https://maps.app.goo.gl/xYFKQRRMSkPF6hSe8" class="me-4 text-white">Google Maps</a>
+              <a href="https://yandex.uz/maps/-/CDXFN-Ju" target="_blank" class="text-white">Yandex Maps</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="branch-card">
+          <div
+            class="branch-card-half branch-card-adress-photo d-flex justify-content-center align-items-center"
+          >
+            <img src="/assets/img/sergeli.jpg" alt="sergeli" class="w-100" />
+          </div>
+          <div class="branch-card-half branch-card-adress-details">
+            <h1 class="branch-card-adress-location">{{ "sergeli" | translate }}</h1>
+            <div class="branch-card-adress-name">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="25"
+                height="25"
+                fill="#fff"
+                class="bi bi-geo-alt-fill"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6"
+                />
+              </svg>
+              <h4 class="text-white">{{ "address" | translate }}:</h4>
+            </div>
+            <p class="branch-card-adress-paragraph">Sergeli 8/3</p>
+            <div class="branch-card-adress-links">
+              <a href="https://maps.app.goo.gl/ztMCDsH6cDGk46Ww5" class="me-4 text-white">Google Maps</a>
+              <a href="https://yandex.uz/maps/-/CDXFZ2~4" class="text-white">Yandex Maps</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="branch-card">
+          <div
+            class="branch-card-half branch-card-adress-photo d-flex justify-content-center align-items-center"
+          >
+            <img src="/assets/img/integro.jpg" alt="intergo" class="w-100" />
+          </div>
+          <div class="branch-card-half branch-card-adress-details">
+            <h1 class="branch-card-adress-location">{{ "integro" | translate }}</h1>
+            <div class="branch-card-adress-name">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="25"
+                height="25"
+                fill="#fff"
+                class="bi bi-geo-alt-fill"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6"
+                />
+              </svg>
+              <h4 class="text-white">{{ "address" | translate }}:</h4>
+            </div>
+            <p class="branch-card-adress-paragraph">Bunyodkor shoh ko'chasi 52</p>
+            <div class="branch-card-adress-links">
+              <a href="https://maps.app.goo.gl/P7iRfeuJRX6Ukkvr6" target="_blank" class="me-4 text-white">Google Maps</a>
+              <a href="https://yandex.uz/maps/-/CDXFNOIf" target="_blank" class="text-white">Yandex Maps</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="swiper-pagination"></div>
+  </div>
+</section>
+
+<app-footer></app-footer>

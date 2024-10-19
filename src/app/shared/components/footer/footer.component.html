@@ -1,0 +1,132 @@
+<footer id="contactus" *ngIf="headerFooter">
+  <h2 class="text-center mb-5" id="contact-h2">{{ "contact-now" | translate }}</h2>
+  <div class="container">
+    <div class="row pb-3">
+      <div class="col-md-12">
+        <div class="card rounded-0">
+          <div class="card-body send-info-card">
+            <form (submit)="postMessage()">
+              <div class="mb-3">
+                <label for="exampleNam" class="form-label form-label-name"
+                  >{{ "name" | translate }}</label
+                >
+                <input
+                  type="text"
+                  id="exampleNam"
+                  class="form-control"
+                  aria-describedby="name"
+                  placeholder="{{ 'your-name' | translate }}"
+                  name="name"
+                  [(ngModel)]="name"
+                  required
+                />
+              </div>
+              <div class="mb-3 disabled-input">
+                <label for="name" class="form-label form-label-phone"
+                  >{{ "phone" | translate }}</label
+                >
+                <div class="d-flex">
+                  <input disabled value="+998" class="form-control" />
+                  <input
+                    type="text"
+                    class="form-control contact-number numb"
+                    id="exampleNumber"
+                    aria-describedby="name"
+                    name="number"
+                    [(ngModel)]="number"
+                    required
+                  />
+                </div>
+              </div>
+              <label for="form-select" class="form-label form-label-branch"
+                >{{ "branch" | translate }} </label
+              >
+              <select
+                class="form-select mb-3"
+                aria-label="Default select example"
+                id="geolocation_select"
+                name="branch"
+                [(ngModel)]="branch"
+                required
+              >
+                <option value="Chorsu">{{ "chorsu" | translate }} </option>
+                <option value="Kadisheva">{{ "kadisheva" | translate }}</option>
+                <option value="Qatortol">{{ "qatortol" | translate }}</option>
+                <option value="Sergeli">{{ "sergeli" | translate }}</option>
+                <option value="Integro">{{ "integro" | translate }}</option>
+              </select>
+              <label
+                for="type"
+                class="mb-2"
+                id="form-label-course"
+                class="form-label-course form-label"
+                >{{ "course" | translate }} </label
+              >
+              <select
+                class="form-select mb-3"
+                aria-label="Default select example"
+                id="course_select"
+                name="course"
+                [(ngModel)]="course"
+                required
+              >
+                <option value="Hamshiralik">{{ "medicine" | translate }}</option>
+                <option value="Arab tili">{{ "arabic" | translate }}</option>
+                <option value="Ingiliz tili">{{ "english" | translate }}</option>
+                <option value="Rust tili">{{ "russian" | translate }}</option>
+              </select>
+              <button type="submit" class="btn btn-primary" id="submit-button">
+                {{ "send" | translate }}
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<div class="final-footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <img src="/assets/img/savod_white.png" width="100%" routerLink="/" class="cursor-pointer" />
+      </div>
+      <div class="col-md-4">
+        <h5 id="courses-h5">{{ "courses" | translate }}</h5>
+        <ul class="footer-card-courses-ul ps-0">
+          <a href="#hamshira">
+            <li>{{ "about-us" | translate }}</li>
+          </a>
+
+          <a href="/courses">
+            <li>{{ "courses" | translate }}</li>
+          </a>
+          <a href="/branches">
+            <li>{{ "branches" | translate }}</li>
+          </a>
+          <a href="/form">
+            <li>{{ "contact-now" | translate }} </li>
+          </a>
+        </ul>
+      </div>
+      <div class="col-md-4">
+        <div class="footer-card">
+          <h5 id="getintouch-h5">{{ "contact-us" | translate }}</h5>
+          <div class="d-flex flex-column">
+            <a class="text-white" href="tel:+998 (78) 113-93-39">
+              +998 (78) 113-93-39
+            </a>
+            <a class="text-white" href="tel:+998 (97) 848-22-22">
+              +998 (97) 848-22-22
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<ngb-toast *ngIf="show" header="Savod.uz" [autohide]="true" [delay]="10000" (hidden)="show=false">
+  {{ "message" | translate }}
+</ngb-toast>
