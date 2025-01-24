@@ -29,13 +29,13 @@ html {
 }
 
 .btn-primary {
-  background-color: #4600d1 !important;
-  border-color: #4600d1 !important;
+  background-color: #05AD4C !important;
+  border-color: #05AD4C !important;
 }
 
 .btn-primary:hover {
   background-color: #fff !important;
-  color: #4600d1 !important;
+  color: #05AD4C !important;
 }
 
 .bg-primary {
@@ -116,8 +116,8 @@ html {
 
 .nav-item .dropdown-menu .dropdown-item {
   transition: 0.2s ease;
-  background-color: #4600d1 !important;
-  border-color: #4600d1 !important;
+  background-color: #05AD4C !important;
+  border-color: #05AD4C !important;
   color: #fff;
   padding: 8px 20px;
   display: flex;
@@ -131,11 +131,11 @@ html {
 
 .nav-item .dropdown-menu .dropdown-item:hover {
   background-color: #fff !important;
-  color: #4600d1 !important;
+  color: #05AD4C !important;
 }
 
 .nav-item .dropdown-menu.show {
-  border: 1px solid #4600d1 !important;
+  border: 1px solid #05AD4C !important;
   border-top-left-radius: 0px !important;
   border-top-right-radius: 0px !important;
   overflow: hidden;
@@ -156,7 +156,7 @@ section {
 #about-us h2,
 #our-branches,
 #contact-h2 {
-  background: linear-gradient(90deg, rgb(88, 126, 250) 0, #4600d1);
+  background: linear-gradient(90deg, rgba(0, 62, 26, 0.706) 0, #05AD4C);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: 800;
@@ -177,7 +177,7 @@ section {
   display: block;
   width: 160px;
   height: 5px;
-  background: linear-gradient(90deg, rgb(88, 126, 250) 0, #4600d1);
+  background: linear-gradient(90deg, rgba(0, 62, 26, 0.706) 0, #05AD4C);
   margin-top: 5px;
 }
 
@@ -251,8 +251,8 @@ section {
 }
 
 .btn-outline-primary {
-  color: #4600d1 !important;
-  border-color: #4600d1 !important;
+  color: #05AD4C !important;
+  border-color: #05AD4C !important;
   border-radius: 50px;
 }
 
@@ -269,12 +269,12 @@ section {
 .btn.show,
 .btn:first-child:active,
 :not(.btn-check) + .btn:active {
-  background-color: #4600d1 !important;
+  background-color: #05AD4C !important;
   color: #fff !important;
 }
 
 .btn-outline-primary:hover {
-  background-color: #4600d1 !important;
+  background-color: #05AD4C !important;
   color: #fff !important;
 }
 
@@ -328,7 +328,7 @@ section {
 .mySwiper-3 .swiper-button-next::after,
 .mySwiper-3 .swiper-button-prev::after {
   font-size: 1.4rem !important;
-  color: #4600d1 !important;
+  color: #05AD4C !important;
 }
 
 .w-10 {
@@ -458,7 +458,7 @@ footer .col-md-12 .send-info-card {
 }
 
 .medicine-modal .send-info-card__bg {
-  background: linear-gradient(228deg, #c80096 -22.97%, #4600d1 120.53%);
+  background: linear-gradient(228deg, #c80096 -22.97%, #05AD4C 120.53%);
   border-top-right-radius: 50px;
   border-bottom-right-radius: 50px;
 }
@@ -710,7 +710,7 @@ footer .col-md-12 .send-info-card {
 }
 
 .branch-card-adress-details {
-  background-color: #0000bc;
+  background-color: rgb(5, 173, 76);
   border-top-right-radius: 20px !important;
   border-bottom-right-radius: 20px !important;
   padding-top: 30px;
@@ -794,9 +794,12 @@ footer .col-md-12 .send-info-card {
 }
 
 .final-footer {
-  background: linear-gradient(90deg, rgb(88, 126, 250) 0, #4600d1);
+  background: linear-gradient(90deg, rgba(5, 173, 75, 0.543) 0, #05ad4c);
   padding-top: 40px;
   padding-bottom: 40px;
+  a {
+    text-decoration: none !important;
+  }
 }
 
 #courses-h5,

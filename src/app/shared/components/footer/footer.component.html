@@ -1,5 +1,7 @@
 <footer id="contactus" *ngIf="headerFooter">
-  <h2 class="text-center mb-5" id="contact-h2">{{ "contact-now" | translate }}</h2>
+  <h2 class="text-center mb-5" id="contact-h2">
+    {{ "contact-now" | translate }}
+  </h2>
   <div class="container">
     <div class="row pb-3">
       <div class="col-md-12">
@@ -7,9 +9,9 @@
           <div class="card-body send-info-card">
             <form (submit)="postMessage()">
               <div class="mb-3">
-                <label for="exampleNam" class="form-label form-label-name"
-                  >{{ "name" | translate }}</label
-                >
+                <label for="exampleNam" class="form-label form-label-name">{{
+                  "name" | translate
+                }}</label>
                 <input
                   type="text"
                   id="exampleNam"
@@ -22,9 +24,9 @@
                 />
               </div>
               <div class="mb-3 disabled-input">
-                <label for="name" class="form-label form-label-phone"
-                  >{{ "phone" | translate }}</label
-                >
+                <label for="name" class="form-label form-label-phone">{{
+                  "phone" | translate
+                }}</label>
                 <div class="d-flex">
                   <input disabled value="+998" class="form-control" />
                   <input
@@ -39,8 +41,8 @@
                 </div>
               </div>
               <label for="form-select" class="form-label form-label-branch"
-                >{{ "branch" | translate }} </label
-              >
+                >{{ "branch" | translate }}
+              </label>
               <select
                 class="form-select mb-3"
                 aria-label="Default select example"
@@ -49,7 +51,7 @@
                 [(ngModel)]="branch"
                 required
               >
-                <option value="Chorsu">{{ "chorsu" | translate }} </option>
+                <option value="Chorsu">{{ "chorsu" | translate }}</option>
                 <option value="Kadisheva">{{ "kadisheva" | translate }}</option>
                 <option value="Qatortol">{{ "qatortol" | translate }}</option>
                 <option value="Sergeli">{{ "sergeli" | translate }}</option>
@@ -60,8 +62,8 @@
                 class="mb-2"
                 id="form-label-course"
                 class="form-label-course form-label"
-                >{{ "course" | translate }} </label
-              >
+                >{{ "course" | translate }}
+              </label>
               <select
                 class="form-select mb-3"
                 aria-label="Default select example"
@@ -70,9 +72,13 @@
                 [(ngModel)]="course"
                 required
               >
-                <option value="Hamshiralik">{{ "medicine" | translate }}</option>
+                <option value="Hamshiralik">
+                  {{ "medicine" | translate }}
+                </option>
                 <option value="Arab tili">{{ "arabic" | translate }}</option>
-                <option value="Ingiliz tili">{{ "english" | translate }}</option>
+                <option value="Ingiliz tili">
+                  {{ "english" | translate }}
+                </option>
                 <option value="Rust tili">{{ "russian" | translate }}</option>
               </select>
               <button type="submit" class="btn btn-primary" id="submit-button">
@@ -90,7 +96,12 @@
   <div class="container">
     <div class="row">
       <div class="col-md-4">
-        <img src="/assets/img/savod_white.png" width="100%" routerLink="/" class="cursor-pointer" />
+        <img
+          src="/assets/img/savod_white.png"
+          width="100%"
+          routerLink="/"
+          class="cursor-pointer"
+        />
       </div>
       <div class="col-md-4">
         <h5 id="courses-h5">{{ "courses" | translate }}</h5>
@@ -106,7 +117,7 @@
             <li>{{ "branches" | translate }}</li>
           </a>
           <a href="/form">
-            <li>{{ "contact-now" | translate }} </li>
+            <li>{{ "contact-now" | translate }}</li>
           </a>
         </ul>
       </div>
@@ -127,6 +138,26 @@
   </div>
 </div>
 
-<ngb-toast *ngIf="show" header="Savod.uz" [autohide]="true" [delay]="10000" (hidden)="show=false">
-  {{ "message" | translate }}
-</ngb-toast>
+<div
+  class="w-100 position-fixed"
+  *ngIf="show"
+  style="min-height: 100vh; backdrop-filter: blur(10px); top: 0px; z-index: 999 !important;"
+>
+  <div class="modal d-flex justify-content-center align-items-center w-100 show" id="staticBackdrop">
+    <div class="modal-dialog">
+      <div class="modal-content" style="max-width: 500px">
+        <div class="modal-header">
+          <h3 class="mb-0">Savodschool.uz</h3>
+        </div>
+        <div class="modal-body">
+          {{ "message" | translate }}
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" (click)="show = false">
+            Ok
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

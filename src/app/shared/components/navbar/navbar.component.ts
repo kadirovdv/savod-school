@@ -28,9 +28,9 @@ export class NavbarComponent {
   changeLanguage(language: string) {
     this.loaderService.showLoader();
 
-      localStorage.setItem('language', language);
-      this.i18n.setLang(language);
-      this.translateService.use(language);
-      this.loaderService.hideLoader()
+    localStorage.setItem('language', language);
+    this.i18n.setLang(language);
+    this.translateService.use(language);
+    this.loaderService.hideLoader();
   }
 }
