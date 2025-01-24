@@ -121,6 +121,8 @@
             <p id="course_desc">{{ "medicine-desc" | translate }}</p>
             <button
               class="btn btn-outline-primary btn-lg open-medicine btn-signup"
+              (click)="setIndex(3)"
+              routerLink="/form"
             >
               {{ "register" | translate }}
             </button>
@@ -137,6 +139,8 @@
             </p>
             <button
               class="btn btn-outline-primary btn-lg btn-signup open-arabic"
+              routerLink="/form"
+              (click)="setIndex(0)"
             >
               {{ "register" | translate }}
             </button>
@@ -153,6 +157,8 @@
             </p>
             <button
               class="btn btn-outline-primary btn-lg btn-signup open-english"
+              (click)="setIndex(1)"
+              routerLink="/form"
             >
               {{ "register" | translate }}
             </button>
@@ -169,6 +175,8 @@
             </p>
             <button
               class="btn btn-outline-primary btn-lg btn-signup open-russian"
+              (click)="setIndex(2)"
+              routerLink="/form"
             >
               {{ "register" | translate }}
             </button>

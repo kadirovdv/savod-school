@@ -19,7 +19,7 @@ export class FormComponent {
   error = false;
   name = '';
   course = '';
-  show = false
+  show = false;
   public countries = [
     {
       name: { en: 'Afghanistan', ru: 'Афганистан', uz: 'Afgʻoniston' },
@@ -984,7 +984,11 @@ export class FormComponent {
     },
   ];
 
-  constructor(private swiperService: SwiperService, private api: ApiService, private loaderService: LoaderService) {
+  constructor(
+    private swiperService: SwiperService,
+    private api: ApiService,
+    private loaderService: LoaderService
+  ) {
     window.scrollTo(0, 0);
     this.swiperService.state$.subscribe((state) => {
       this.index = state;
@@ -996,10 +1000,11 @@ export class FormComponent {
   }
 
   ngAfterViewInit(): void {
+    let index = Number(sessionStorage.getItem('index'));
     const swiperConfig: any = {
       grabCursor: true,
       centeredSlides: true,
-      initialSlide: 0,
+      initialSlide: index,
       slidesPerView: 'auto',
       pagination: {
         el: '.swiper-pagination',
@@ -1009,9 +1014,7 @@ export class FormComponent {
     this.swiperService.initializeSwiper('.mySwiper-2', swiperConfig);
   }
 
-  createCountryFrom10k() {
-    console.log(this.countries);
-  }
+  createCountryFrom10k() {}
 
   openCountryDropdown() {
     this.ngSelect.open();
@@ -1029,10 +1032,15 @@ export class FormComponent {
   }
 
   postMessage() {
-    if(!this.name.length || !this.branch.length || !this.course.length || !this.number.length) {
-      return
+    if (
+      !this.name.length ||
+      !this.branch.length ||
+      !this.course.length ||
+      !this.number.length
+    ) {
+      return;
     }
-    this.loaderService.showLoader()
+    this.loaderService.showLoader();
 
     let requestContacts = [
       {
@@ -1083,7 +1091,7 @@ export class FormComponent {
       if (res) {
         this.api.createLead(requestLead).subscribe((res) => {
           // console.log(res);
-          this.loaderService.hideLoader()
+          this.loaderService.hideLoader();
           this.show = true;
         });
       }

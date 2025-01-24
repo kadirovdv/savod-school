@@ -33,4 +33,8 @@ export class MainPage {
     };
     this.swiperService.initializeSwiper('.mySwiper', swiperConfig);
   }
+
+  setIndex(index: number): void {
+    sessionStorage.setItem('index', index.toString());
+  }
 }
