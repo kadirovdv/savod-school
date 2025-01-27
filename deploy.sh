@@ -2,7 +2,7 @@
 
 git pull https://kadirovdv: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@github.com/kadirovdv/savod-school --allow-unrelated-histories
 
-yarn add
+yarn
 
 yarn build
 
