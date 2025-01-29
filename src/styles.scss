@@ -29,13 +29,13 @@ html {
 }
 
 .btn-primary {
-  background-color: #05AD4C !important;
-  border-color: #05AD4C !important;
+  background-color: #05ad4c !important;
+  border-color: #05ad4c !important;
 }
 
 .btn-primary:hover {
   background-color: #fff !important;
-  color: #05AD4C !important;
+  color: #05ad4c !important;
 }
 
 .bg-primary {
@@ -116,8 +116,8 @@ html {
 
 .nav-item .dropdown-menu .dropdown-item {
   transition: 0.2s ease;
-  background-color: #05AD4C !important;
-  border-color: #05AD4C !important;
+  background-color: #05ad4c !important;
+  border-color: #05ad4c !important;
   color: #fff;
   padding: 8px 20px;
   display: flex;
@@ -131,11 +131,11 @@ html {
 
 .nav-item .dropdown-menu .dropdown-item:hover {
   background-color: #fff !important;
-  color: #05AD4C !important;
+  color: #05ad4c !important;
 }
 
 .nav-item .dropdown-menu.show {
-  border: 1px solid #05AD4C !important;
+  border: 1px solid #05ad4c !important;
   border-top-left-radius: 0px !important;
   border-top-right-radius: 0px !important;
   overflow: hidden;
@@ -156,7 +156,7 @@ section {
 #about-us h2,
 #our-branches,
 #contact-h2 {
-  background: linear-gradient(90deg, rgba(0, 62, 26, 0.706) 0, #05AD4C);
+  background: linear-gradient(90deg, rgba(0, 62, 26, 0.706) 0, #05ad4c);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: 800;
@@ -177,7 +177,7 @@ section {
   display: block;
   width: 160px;
   height: 5px;
-  background: linear-gradient(90deg, rgba(0, 62, 26, 0.706) 0, #05AD4C);
+  background: linear-gradient(90deg, rgba(0, 62, 26, 0.706) 0, #05ad4c);
   margin-top: 5px;
 }
 
@@ -251,8 +251,8 @@ section {
 }
 
 .btn-outline-primary {
-  color: #05AD4C !important;
-  border-color: #05AD4C !important;
+  color: #05ad4c !important;
+  border-color: #05ad4c !important;
   border-radius: 50px;
 }
 
@@ -269,12 +269,12 @@ section {
 .btn.show,
 .btn:first-child:active,
 :not(.btn-check) + .btn:active {
-  background-color: #05AD4C !important;
+  background-color: #05ad4c !important;
   color: #fff !important;
 }
 
 .btn-outline-primary:hover {
-  background-color: #05AD4C !important;
+  background-color: #05ad4c !important;
   color: #fff !important;
 }
 
@@ -328,7 +328,7 @@ section {
 .mySwiper-3 .swiper-button-next::after,
 .mySwiper-3 .swiper-button-prev::after {
   font-size: 1.4rem !important;
-  color: #05AD4C !important;
+  color: #05ad4c !important;
 }
 
 .w-10 {
@@ -458,7 +458,7 @@ footer .col-md-12 .send-info-card {
 }
 
 .medicine-modal .send-info-card__bg {
-  background: linear-gradient(228deg, #c80096 -22.97%, #05AD4C 120.53%);
+  background: linear-gradient(228deg, #c80096 -22.97%, #05ad4c 120.53%);
   border-top-right-radius: 50px;
   border-bottom-right-radius: 50px;
 }
@@ -810,12 +810,85 @@ footer .col-md-12 .send-info-card {
   font-weight: 800;
 }
 
-
 .toast {
   position: fixed;
   bottom: 10px;
   right: 10px;
   z-index: 999 !important;
+}
+
+.modal-badge {
+  display: flex;
+  align-items: center;
+  &::after {
+    padding: 0px 3px;
+    border-radius: 7px;
+    background-color: #05ad4c;
+    color: white;
+    font-weight: bold;
+    content: ".uz";
+    display: block;
+  }
+}
+
+#check-group {
+  animation: 0.32s ease-in-out 1.03s check-group;
+  transform-origin: center;
+}
+
+#check-group #check {
+  animation: 0.34s cubic-bezier(0.65, 0, 1, 1) 0.8s forwards check;
+  stroke-dasharray: 0, 75px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+#check-group #outline {
+  animation: 0.38s ease-in outline;
+  transform: rotate(0deg);
+  transform-origin: center;
+}
+
+#check-group #white-circle {
+  animation: 0.35s ease-in 0.35s forwards circle;
+  transform: none;
+  transform-origin: center;
+}
+
+@keyframes outline {
+  from {
+    stroke-dasharray: 0, 345.576px;
+  }
+  to {
+    stroke-dasharray: 345.576px, 345.576px;
+  }
+}
+@keyframes circle {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0);
+  }
+}
+@keyframes check {
+  from {
+    stroke-dasharray: 0, 75px;
+  }
+  to {
+    stroke-dasharray: 75px, 75px;
+  }
+}
+@keyframes check-group {
+  from {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.09);
+  }
+  to {
+    transform: scale(1);
+  }
 }
 
 @media screen and (max-height: 910px) {

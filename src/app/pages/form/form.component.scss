@@ -1,19 +1,37 @@
 section {
   padding-top: 200px;
   min-height: 100vh;
-  background: rgb(23,0,70);
-background: -moz-linear-gradient(52deg, rgba(23,0,70,1) 0%, rgba(93,35,5,1) 100%);
-background: -webkit-linear-gradient(52deg, rgba(23,0,70,1) 0%, rgba(93,35,5,1) 100%);
-background: linear-gradient(52deg, rgba(23,0,70,1) 0%, rgba(93,35,5,1) 100%);
-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#170046",endColorstr="#5d2305",GradientType=1);
-  h1, h2, h3, h4, h5, h6, p {
+  background: rgb(5, 173, 76);
+  background: -moz-linear-gradient(
+    52deg,
+    rgba(23, 0, 70, 1) 0%,
+    rgb(5, 173, 76) 100%
+  );
+  background: -webkit-linear-gradient(
+    52deg,
+    rgba(23, 0, 70, 1) 0%,
+    rgb(5, 173, 76) 100%
+  );
+  background: linear-gradient(
+    52deg,
+    rgba(23, 0, 70, 1) 0%,
+    rgb(5, 173, 76) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#170046",endColorstr="#5d2305",GradientType=1);
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p {
     color: #fff !important;
   }
 }
 
 .card {
   border-radius: 10px;
-  border-color: #05AD4C !important;
+  border-color: #05ad4c !important;
   border-width: 2px !important;
   height: 500px !important;
   max-height: 500px;
@@ -58,7 +76,7 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#170046",endCo
 }
 
 .gradient-background {
-  background: linear-gradient(280deg,#8ddfb1,#10b654,#2abf6a,#2bc86e);
+  background: linear-gradient(280deg, #8ddfb1, #10b654, #2abf6a, #2bc86e);
   background-size: 240% 240%;
   animation: gradient-animation 36s ease infinite;
 }
@@ -89,7 +107,6 @@ button {
 }
 
 @media screen and (max-width: 500px) {
-
   section {
     padding-top: 100px;
   }

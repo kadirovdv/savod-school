@@ -36,9 +36,15 @@
                     aria-describedby="name"
                     name="number"
                     [(ngModel)]="number"
+                    (keydown)="validateInput($event)"
                     required
+                    appMask
+                    pattern="[0-9]{3} [0-9]{3} [0-9]{2} [0-9]{2}"
                   />
                 </div>
+                <small class="text-danger" *ngIf="error">
+                  {{ "error-message" | translate }}
+                </small>
               </div>
               <label for="form-select" class="form-label form-label-branch"
                 >{{ "branch" | translate }}
@@ -51,6 +57,7 @@
                 [(ngModel)]="branch"
                 required
               >
+                <option value="">{{ "choose-branch" | translate }}</option>
                 <option value="Chorsu">{{ "chorsu" | translate }}</option>
                 <option value="Kadisheva">{{ "kadisheva" | translate }}</option>
                 <option value="Qatortol">{{ "qatortol" | translate }}</option>
@@ -72,6 +79,7 @@
                 [(ngModel)]="course"
                 required
               >
+                <option value="">{{ "choose-course" | translate }}</option>
                 <option value="Hamshiralik">
                   {{ "medicine" | translate }}
                 </option>
@@ -141,19 +149,76 @@
 <div
   class="w-100 position-fixed"
   *ngIf="show"
-  style="min-height: 100vh; backdrop-filter: blur(10px); top: 0px; z-index: 999 !important;"
+  style="
+    min-height: 100vh;
+    width: 100%;
+    backdrop-filter: blur(10px);
+    top: 0px;
+    z-index: 10000 !important;
+  "
 >
-  <div class="modal d-flex justify-content-center align-items-center w-100 show" id="staticBackdrop">
-    <div class="modal-dialog">
-      <div class="modal-content" style="max-width: 500px">
-        <div class="modal-header">
-          <h3 class="mb-0">Savodschool.uz</h3>
+  <div class="modal d-block w-100 show" id="staticBackdrop">
+    <div class="modal-dialog modal-fullscreen">
+      <div class="modal-content">
+        <div class="modal-header d-flex align-items-center">
+          <h3 class="mb-0 modal-badge">Savodschool</h3>
         </div>
-        <div class="modal-body">
-          {{ "message" | translate }}
+        <div
+          class="modal-body d-flex flex-column align-items-center justify-content-center"
+        >
+          <h5 class="mb-2 text-center">{{ "message" | translate }}</h5>
+          <svg
+            width="115px"
+            height="115px"
+            viewBox="0 0 133 133"
+            version="1.1"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+          >
+            <g
+              id="check-group"
+              stroke="none"
+              stroke-width="1"
+              fill="none"
+              fill-rule="evenodd"
+            >
+              <circle
+                id="filled-circle"
+                fill="#05AD4C"
+                cx="66.5"
+                cy="66.5"
+                r="54.5"
+              />
+              <circle
+                id="white-circle"
+                fill="#FFFFFF"
+                cx="66.5"
+                cy="66.5"
+                r="55.5"
+              />
+              <circle
+                id="outline"
+                stroke="#05AD4C"
+                stroke-width="4"
+                cx="66.5"
+                cy="66.5"
+                r="54.5"
+              />
+              <polyline
+                id="check"
+                stroke="#FFFFFF"
+                stroke-width="5.5"
+                points="41 70 56 85 92 49"
+              />
+            </g>
+          </svg>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-primary" (click)="show = false">
+          <button
+            type="button"
+            class="btn btn-primary w-100 btn-lg"
+            (click)="show = false"
+          >
             Ok
           </button>
         </div>

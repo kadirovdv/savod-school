@@ -85,4 +85,15 @@ export class FooterComponent {
       }
     });
   }
+
+  validateInput(e: KeyboardEvent): void {
+    const charCode = e.keyCode ? e.keyCode : e.which;
+
+    if (charCode > 31 && (charCode < 48 || charCode > 57)) {
+      this.error = true;
+      e.preventDefault();
+    } else {
+      this.error = false;
+    }
+  }
 }
