@@ -1,0 +1,108 @@
+.content {
+  font-family: "SF UI Display", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-style: normal;
+  background: url("/assets/img/bg.png") no-repeat center center fixed;
+  background-size: cover;
+  min-height: 100vh;
+  padding-top: 40px;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav img {
+  width: 200px;
+}
+
+nav h5 {
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 38px;
+  color: #005533;
+  margin-left: 5px;
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 50px;
+  line-height: 67px;
+  text-align: center;
+  color: #ffffff;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+p {
+  font-weight: 500;
+  font-size: 38px;
+  line-height: 47px;
+  text-align: center;
+  color: #ffffff;
+  margin-bottom: 30px;
+}
+
+button {
+  padding: 15px 70px 15px 25px;
+  background: #ffffff;
+  border: 2px solid #00ab4f;
+  box-shadow: 1px 4px 5px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+}
+
+button span {
+  font-weight: 500;
+  font-size: 25px;
+  color: #000000;
+  text-align: start;
+  margin-left: 10px;
+}
+
+@media screen and (max-width: 460px) {
+  .content {
+    padding-top: 60px;
+  }
+  nav img {
+    width: 120px !important;
+  }
+
+  nav h5 {
+    font-size: 18px !important;
+  }
+
+
+  .content h1 {
+    font-size: 40px;
+    margin-top: 60px;
+    font-weight: 600;
+  }
+
+  .content p {
+    font-size: 22px;
+    line-height: 30px;
+    margin-top: 30px;
+  }
+
+  button {
+    padding: 10px 15px 10px 15px;
+  }
+
+  span:not(.d-none) {
+    display: none;
+  }
+
+  span.d-none {
+    display: block !important;
+    font-size: 18px !important;
+  }
+
+  button svg {
+    width: 55px;
+    height: 51px;
+  }
+}

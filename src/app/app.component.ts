@@ -14,6 +14,7 @@ export class AppComponent implements OnInit {
   ) {}
 
   ngOnInit() {
+    localStorage.removeItem("success");
     this.scriptLoader.loadBootstrapJs();
     if (!localStorage.getItem('language')?.length) {
       localStorage.setItem('language', 'uz');

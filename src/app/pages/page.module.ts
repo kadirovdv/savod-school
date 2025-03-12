@@ -9,8 +9,9 @@ import { NgSelectModule } from '@ng-select/ng-select';
 import { FormsModule } from '@angular/forms';
 import { TranslateModule } from '@ngx-translate/core';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { SuccessPage } from './success/success.page';
 @NgModule({
-    declarations: [MainPage, BranchesPage, FormComponent],
+    declarations: [MainPage, BranchesPage, FormComponent, SuccessPage],
     imports: [PagesRoutingModule, SharedService, CommonModule, NgSelectModule, FormsModule, TranslateModule, NgbModule],
     exports: [],
 })
